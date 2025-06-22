@@ -1,14 +1,15 @@
 # 🧾 Expense Report Generator
 
-Automate your monthly expense reports using Python, Docker, and Makefile. This project reads a CSV file containing your expenses, generates charts, and outputs a complete PDF report.
+Automate your monthly expense reports using **Python**, **Docker**, and **Makefile**. This project reads a CSV file containing your expenses, generates charts, builds a professional PDF report, and exports your data to Excel — all ready for bookkeeping or personal analysis.
 
 ## 📦 Features
 
-- Read and validate expense data from a CSV file
-- Generate pie charts for category distribution
-- Create a professional PDF report
-- Run locally or in a Docker container
-- Easy automation via Makefile
+- ✅ Read and validate structured expense data from a CSV file
+- 📊 Generate pie charts showing category distribution
+- 📝 Create a detailed PDF financial report with summary + chart
+- 📈 Export your data to Excel with auto-formatting and summary
+- 🐳 Run locally or inside a Docker container
+- 🔁 Automate your workflow using Makefile targets
 
 ---
 
