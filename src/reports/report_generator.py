@@ -43,7 +43,7 @@ def generate_pdf(df, chart_path):
     story.append(Paragraph("Relatório de Gastos Mensais", styles['Title']))
     story.append(Paragraph(
         f"Data de geração: {datetime.now().strftime('%d/%m/%Y')}", styles['Normal']))
-    story.append(Spacer(1, 12))
+    story.append(Spacer(1, 9))
 
     # Resume
     story.append(Paragraph("Resumo Financeiro:", styles['Heading2']))
@@ -57,13 +57,13 @@ def generate_pdf(df, chart_path):
         f"Despesas Variáveis: R$ {despesas_variaveis:,.2f}", styles['Normal']))
     story.append(
         Paragraph(f"<b>Saldo Final: R$ {saldo:,.2f}</b>", styles['Normal']))
-    story.append(Spacer(1, 12))
+    story.append(Spacer(1, 9))
 
     story.append(Paragraph("Resumo por Categoria:", styles['Heading2']))
     for categoria, valor in grouped.items():
         story.append(
             Paragraph(f"{categoria}: R$ {valor:.2f}", styles['Normal']))
-    story.append(Spacer(1, 24))
+    story.append(Spacer(1, 18))
 
     # Chart
     story.append(Paragraph("Gráfico de Gastos:", styles['Heading2']))

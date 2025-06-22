@@ -32,7 +32,7 @@ def generate_pie_chart(df):
     )
 
     ax.axis('equal')
-    plt.title('Distribuição de Gastos por Categoria', fontsize=12)
+    plt.title('Distribuição de Gastos por Categoria', fontsize=12, pad=30)
     plt.tight_layout()
 
     # File path

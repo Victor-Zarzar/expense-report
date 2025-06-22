@@ -93,3 +93,6 @@ __pycache__/
 
 # Py Test cache
 .pytest_cache
+
+# Ignore the reports folder and all files inside
+/reports/

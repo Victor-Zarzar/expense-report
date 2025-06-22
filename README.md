@@ -31,25 +31,41 @@ expense-report/
 
 ---
 
+## 🦾 Stack
+- 🔠 **Language:** Python
+- 🛠️ **Containerization:** Docker
+- 📂 **Dependency Management:** Virtualenv and Pip
+- 🔧 **Automation:** Makefile
+
+---
+
+## 🔧 Requirements
+- 💻 Python 3.11+
+- 🐳 Docker
+- ✅ Make
+
+
+---
+
 ## 🚀 Quick Start
 
-### 1. Run with Docker
+### 1. Local Development
 
 ```bash
-make build    # Build Docker image
-make create   # Generate the report inside Docker
+make build     # Build Docker image
+make install   # Set up virtualenv and install dependencies
 ```
 
 ### 2. Run Locally (Python)
 
 ```bash
-make install  # Set up virtualenv and install dependencies
+make create   # Generate the report inside Docker
 make local    # Run the report generator locally
 ```
 
 ---
 
-## 📊 CSV Input Format (`data/expenses_2025_07.csv.csv`)
+## 📊 CSV Input Format (`data/expenses_2025_07.csv`)
 
 ```csv
 categoria,descricao,valor,data
