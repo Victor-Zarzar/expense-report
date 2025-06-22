@@ -17,11 +17,11 @@ Automate your monthly expense reports using Python, Docker, and Makefile. This p
 ```
 expense-report/
 ├── data/                   # CSV files with monthly expenses
-├── reports/                # Generated PDF reports and images
+├── reports/                # Generated PDF, Excel files and charts
 ├── src/
 │   ├── models/            # Data loading and validation
 │   ├── charts/            # Chart generation (e.g., pie chart)
-│   ├── reports/           # PDF generation using ReportLab
+│   ├── reports/           # PDF (ReportLab) and Excel (pandas/openpyxl)
 │   └── main.py            # Main entry point
 ├── Dockerfile
 ├── Makefile
@@ -32,35 +32,61 @@ expense-report/
 ---
 
 ## 🦾 Stack
+
 - 🔠 **Language:** Python
+- 📊 **PDF/Excel:** ReportLab, Matplotlib, Pandas, OpenPyXL
 - 🛠️ **Containerization:** Docker
-- 📂 **Dependency Management:** Virtualenv and Pip
-- 🔧 **Automation:** Makefile
+- 📦 **Dependency Management:** Virtualenv + Pip
+- ⚙️ **Automation:** Makefile
 
 ---
 
 ## 🔧 Requirements
+
 - 💻 Python 3.11+
 - 🐳 Docker
-- ✅ Make
-
+- ✅ Make (GNU)
 
 ---
 
 ## 🚀 Quick Start
 
-### 1. Local Development
+### 1. Project Clone
+```bash
+git clone https://github.com/Victor-Zarzar/expense-report
+```
+
+### 2. Enter in directory and open in your favorite editor(e.g. VSCode):
+```bash
+cd expense-report
+code .
+```
+
+### 3. Local Development
 
 ```bash
 make build     # Build Docker image
 make install   # Set up virtualenv and install dependencies
 ```
 
-### 2. Run Locally (Python)
+### 4. Run the Report (Full Report (PDF + Excel))
 
 ```bash
-make create   # Generate the report inside Docker
+make create    # Docker: generate full report (PDF + Excel)
 make local    # Run the report generator locally
+```
+
+### 5. PDF Only
+
+```bash
+make create-pdf   # Docker: generate only the PDF report
+```
+
+### 6. Excel Only
+
+```bash
+make create-excel   # Docker: generate only the Excel report
+
 ```
 
 ---
@@ -99,9 +125,11 @@ make clean    # Remove reports, images, virtualenv and Docker artifacts
 
 ```bash
 make build    # Build the Docker image
-make create   # Run the report in Docker
-make setup    # Create a virtual environment
 make install  # Install Python dependencies
+make create   # Docker: generate full report (PDF + Excel)
+make create-pdf   # Docker: generate only the PDF report
+make create-excel   # Docker: generate only the Excel report
+make setup    # Create a virtual environment
 make local    # Run the report locally
 make clean    # Clean all generated files
 make help     # Show the help menu
