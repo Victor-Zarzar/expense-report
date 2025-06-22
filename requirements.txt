@@ -1,0 +1,4 @@
+pandas==2.3.0
+matplotlib==3.10.3
+docling==2.37.0
+reportlab==4.4.2
