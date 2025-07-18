@@ -1,15 +1,15 @@
 categoria,descricao,valor,data
-Salário,Salário Líquido,2523.00,2025-08-01
-Adicionais (Salário),Bônus,0.00,2025-08-01
-Internet,Plano Vivo,160.00,2025-08-01
-Condominio,Apartamento,429.00,2025-08-01
-Energia,Conta Luz,30.00,2025-08-01
-Plano Celular,Inter Controle,30.00,2025-08-01
-Investimentos,Renda Fixa,0.00,2025-08-01
-Impostos mensais,INSS DAS,181.00,2025-08-01
-Gastos Extras,Viagem,0.00,2025-08-02
-Alimentação,Supermercado,537.00,2025-08-01
-Transporte,Gasolina,50.00,2025-08-02
-Lazer,Cinema,0.00,2025-08-10
-Aluguel,Apartamento,300.00,2025-08-05
-Saúde,Remédio,0.00,2025-08-08
+Salário,Salário Líquido,3500.00,2025-07-01
+Adicionais (Salário),Bônus,0.00,2025-07-01
+Internet,Plano Vivo,100.00,2025-07-01
+Condominio,Apartamento,400.00,2025-07-01
+Energia,Conta Luz,180.00,2025-07-01
+Plano Celular,Tim Controle,90.00,2025-07-01
+Investimentos,Renda Fixa,300.00,2025-07-01
+Impostos mensais,INSS DAS,400.00,2025-07-01
+Gastos Extras,Viagem,150.00,2025-07-02
+Alimentação,Supermercado,550.00,2025-07-01
+Transporte,Uber,45.00,2025-07-02
+Lazer,Cinema,60.00,2025-07-10
+Aluguel,Apartamento,1500.00,2025-07-05
+Saúde,Remédio,85.00,2025-07-08
