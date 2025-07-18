@@ -25,4 +25,7 @@ def load_data(filepath: str) -> pd.DataFrame:
     # Remove invalid entries
     df = df.dropna(subset=['valor', 'data'])
 
+    # Adds column mes_referencia
+    df['mes_referencia'] = df['data'].dt.strftime('%Y/%m')
+
     return df

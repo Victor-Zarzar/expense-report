@@ -5,8 +5,9 @@ from reports.report_generator import generate_pdf
 from reports.excel_exporter import export_to_excel
 
 
+# This script serves as the main entry point for generating reports.
 def main():
-    df = load_data('data/expenses_2025_07.csv')
+    df = load_data('data/expenses_2025_08.csv')
     mode = os.environ.get("MODE", "all")
 
     if mode == "pdf":

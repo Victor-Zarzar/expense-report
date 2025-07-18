@@ -1,6 +1,6 @@
 # 🧾 Expense Report Generator
 
-Automate your monthly expense reports using **Python**, **Docker**, and **Makefile**. This project reads a CSV file containing your expenses, generates charts, builds a professional PDF report, and exports your data to Excel — all ready for bookkeeping or personal analysis.
+Automate your monthly expense reports using **Python**, and **Makefile**. This project reads a CSV file containing your expenses, generates charts, builds a professional PDF report, and exports your data to Excel — all ready for bookkeeping or personal analysis.
 
 ## 📦 Features
 
@@ -36,7 +36,6 @@ expense-report/
 
 - 🔠 **Language:** Python
 - 📊 **PDF/Excel:** ReportLab, Matplotlib, Pandas, OpenPyXL
-- 🛠️ **Containerization:** Docker
 - 📦 **Dependency Management:** Virtualenv + Pip
 - ⚙️ **Automation:** Makefile
 
@@ -45,7 +44,6 @@ expense-report/
 ## 🔧 Requirements
 
 - 💻 Python 3.11+
-- 🐳 Docker
 - ✅ Make (GNU)
 
 ---
@@ -66,33 +64,31 @@ code .
 ### 3. Local Development
 
 ```bash
-make build     # Build Docker image
 make install   # Set up virtualenv and install dependencies
 ```
 
 ### 4. Run the Report (Full Report (PDF + Excel))
 
 ```bash
-make create    # Docker: generate full report (PDF + Excel)
-make local    # Run the report generator locally
+make create    # Generate full report (PDF + Excel)
 ```
 
 ### 5. PDF Only
 
 ```bash
-make create-pdf   # Docker: generate only the PDF report
+make create-pdf   # Generate only the PDF report
 ```
 
 ### 6. Excel Only
 
 ```bash
-make create-excel   # Docker: generate only the Excel report
+make create-excel   # Generate only the Excel report
 
 ```
 
 ---
 
-## 📊 CSV Input Format (`data/expenses_2025_07.csv`)
+## 📊 CSV Input Format (`data/expenses_2025_08.csv`)
 
 ```csv
 categoria,descricao,valor,data
@@ -104,7 +100,7 @@ Energia,Conta Luz,180.00,2025-07-01
 Plano Celular,Tim Controle,90.00,2025-07-01
 Investimentos,Renda Fixa,300.00,2025-07-01
 Impostos mensais,INSS DAS,400.00,2025-07-01
-Gastos Extras,Viagem,150.00,2025-07-01
+Gastos Extras,Viagem,150.00,2025-07-02
 Alimentação,Supermercado,550.00,2025-07-01
 Transporte,Uber,45.00,2025-07-02
 Lazer,Cinema,60.00,2025-07-10
@@ -125,13 +121,11 @@ make clean    # Remove reports, images, virtualenv and Docker artifacts
 ## 📘 Available Commands
 
 ```bash
-make build    # Build the Docker image
 make install  # Install Python dependencies
-make create   # Docker: generate full report (PDF + Excel)
-make create-pdf   # Docker: generate only the PDF report
-make create-excel   # Docker: generate only the Excel report
+make create   # Generate full report (PDF + Excel)
+make create-pdf   # Generate only the PDF report
+make create-excel   # Generate only the Excel report
 make setup    # Create a virtual environment
-make local    # Run the report locally
 make clean    # Clean all generated files
 make help     # Show the help menu
 ```
