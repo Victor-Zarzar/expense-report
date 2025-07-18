@@ -24,7 +24,6 @@ expense-report/
 │   ├── charts/            # Chart generation (e.g., pie chart)
 │   ├── reports/           # PDF (ReportLab) and Excel (pandas/openpyxl)
 │   └── main.py            # Main entry point
-├── Dockerfile
 ├── Makefile
 ├── requirements.txt
 └── README.md

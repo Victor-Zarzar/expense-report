@@ -28,11 +28,11 @@ def generate_pie_chart(df):
         autopct=lambda pct: f'{pct:.1f}%\nR${pct * total / 100:.0f}',
         startangle=140,
         colors=plt.cm.tab20.colors[:len(labels)],
-        textprops=dict(color="black", fontsize=9)
+        textprops=dict(color="black", fontsize=12)
     )
 
     ax.axis('equal')
-    plt.title('Distribuição de Gastos por Categoria', fontsize=12, pad=30)
+    plt.title('Distribuição de Gastos por Categoria', fontsize=14, pad=30)
     plt.tight_layout()
 
     # File path
