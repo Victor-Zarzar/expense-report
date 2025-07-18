@@ -37,6 +37,7 @@ def generate_pie_chart(df):
 
     # File path
     output_path = 'reports/pie_chart.png'
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
     plt.savefig(output_path)
     plt.close()
 

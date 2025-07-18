@@ -1,13 +1,15 @@
 import os
 from models.data_loader import load_data
 from charts.chart_generator import generate_pie_chart
+from utils.format_generator import get_latest_expense_csv
 from reports.report_generator import generate_pdf
 from reports.excel_exporter import export_to_excel
 
 
 # This script serves as the main entry point for generating reports.
 def main():
-    df = load_data('data/expenses_2025_08.csv')
+    csv_path = get_latest_expense_csv()
+    df = load_data(csv_path)
     mode = os.environ.get("MODE", "all")
 
     if mode == "pdf":

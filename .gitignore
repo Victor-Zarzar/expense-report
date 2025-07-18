@@ -85,9 +85,6 @@ ssl/
 # Python Versions
 *.python-version
 
-# Pycache
-__pycache__/
-
 # Enviroments
 .venv
 
