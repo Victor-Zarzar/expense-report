@@ -93,3 +93,7 @@ ssl/
 
 # Ignore the reports folder and all files inside
 /reports/
+
+# local env files
+.env*.local
+.env

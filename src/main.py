@@ -1,26 +1,42 @@
 import os
+
 from charts.chart_generator import generate_pie_chart
-from models.data_loader import load_data
-from utils.format_generator import get_latest_expense_csv
-from reports.report_generator import generate_pdf
+from config.settings import finance_settings
+from domain.expense_builder import build_expenses_dataframe
 from reports.excel_exporter import export_to_excel
+from reports.report_generator import generate_pdf
 
 
-# This script serves as the main entry point for generating reports.
 def main():
-    csv_path = get_latest_expense_csv()
-    df = load_data(csv_path)
-    mode = os.environ.get("MODE", "all")
+    """
+    Main entrypoint for expense report generation.
+
+    Data source:
+        - Environment variables (validated by Pydantic Settings)
+
+    Output modes:
+        - pdf
+        - excel
+        - all (default)
+    """
+    mode = os.getenv("MODE", "all").lower()
+
+    df = build_expenses_dataframe(finance_settings)
 
     if mode == "pdf":
         chart_path = generate_pie_chart(df)
         generate_pdf(df, chart_path)
+
     elif mode == "excel":
         export_to_excel(df)
-    else:
+
+    elif mode == "all":
         chart_path = generate_pie_chart(df)
         generate_pdf(df, chart_path)
         export_to_excel(df)
+
+    else:
+        raise ValueError(f"Invalid MODE '{mode}'. Expected: pdf, excel, or all.")
 
 
 if __name__ == "__main__":
