@@ -191,6 +191,7 @@ Os arquivos gerados serão salvos no diretório `reports/`.
 | `make create`       | Gera relatório completo (PDF + Excel + Gráficos) |
 | `make create-pdf`   | Gera apenas o relatório PDF                      |
 | `make create-excel` | Gera apenas o relatório Excel                    |
+| `make lint`         | Executa verificação de código com pylint         |
 | `make setup`        | Cria ambiente virtual                            |
 | `make clean`        | Remove relatórios, imagens e artefatos           |
 | `make help`         | Mostra todos os comandos disponíveis             |
@@ -303,13 +304,19 @@ O projeto é organizado em módulos para fácil extensão:
 
 ### Linting & Formatação
 
-Verifique problemas no código:
+Verifique problemas no código com pylint:
 
 ```bash
-python -m pylint src/
+make lint
 ```
 
-Formate automaticamente:
+Ou manualmente usando o ambiente virtual:
+
+```bash
+.venv/bin/python -m pylint src/
+```
+
+Formate automaticamente com black:
 
 ```bash
 python -m black src/
